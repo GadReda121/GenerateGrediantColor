@@ -14,7 +14,7 @@ export default {
     name: "Generate",
     data(){
         return{
-            mainColor : "#eeeeee , #bdbdbd"
+            mainColor: "#eeeeee , #bdbdbd",
         }
     },
     methods: {
@@ -83,6 +83,16 @@ button{
         padding: 20px;
         border-radius: 25px 0px 0px 0px;
         cursor: pointer;
+    }
+    h6{
+        background-color: #eee;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        z-index: 999;
+        padding: 15px 30px;
+        border-radius: 5px;
+        margin-bottom: 0px;
     }
         @media screen and (max-width:567px){
         .box{
