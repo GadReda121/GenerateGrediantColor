@@ -1,7 +1,7 @@
 <template>
     <div class="generate">
         <div class="box">
-            <p @copy="copyToClipboard">{{ mainColor }}</p>
+            <p @click="copyToClipboard">{{ mainColor }}</p>
         </div>
         <button type="button" @click="generateColor">Generate</button>
     </div>
@@ -10,7 +10,6 @@
 <script>
 // ES6 Modules or TypeScript
 import Swal from 'sweetalert2';
-
 export default {
     name: "Generate",
     data(){
@@ -30,8 +29,10 @@ export default {
         copyToClipboard() {
             const box = document.querySelector(".box");
             box.classList.add("animate__animated", "animate__shakeX");
+            let p = document.querySelector("p");
+            navigator.clipboard.writeText(p.firstChild.textContent);
             Swal.fire({
-                title: 'Great! You Copied Colors &#128079; &#128293;',
+                title: `Great! You Copied Colors &#128079; &#128293; <br /> ${p.firstChild.textContent}`,
                 showClass: {
                     popup: 'animate__animated animate__fadeInDown'
                 },
