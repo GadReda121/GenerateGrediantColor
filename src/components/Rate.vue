@@ -1,18 +1,32 @@
 <template>
     <div class="rates">
         <p>Rate Our Website</p>
-        <n-rate clearable allow-half size="large" class="ra"/>
+        <n-rate clearable allow-half size="large" @click="Rating"/>
     </div>
 </template>
 
 <script>
 import { NRate } from "naive-ui";
+import Swal from 'sweetalert2';
 export default {
     name: "Rate",
     components: {
             NRate
-        }
-    }
+        },
+    methods: {
+        Rating() {
+            Swal.fire(
+                {
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Thanks For Rating &#128515;',
+                    showConfirmButton: false,
+                    timer: 1500
+                }
+            )
+            }
+        },
+}
 </script>
 
 <style scoped>

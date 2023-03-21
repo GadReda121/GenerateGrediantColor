@@ -31,7 +31,7 @@ export default {
             const box = document.querySelector(".box");
             box.classList.add("animate__animated", "animate__shakeX");
             Swal.fire({
-                title: 'You copied colors',
+                title: 'Great! You Copied Colors &#128079; &#128293;',
                 showClass: {
                     popup: 'animate__animated animate__fadeInDown'
                 },
